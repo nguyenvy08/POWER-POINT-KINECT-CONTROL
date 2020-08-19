@@ -1,0 +1,34 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="KinectPowerPointControl.MainWindow"
+        Title="Kinect PowerPoint Control"
+        Height="480"
+        Width="640">
+    <Viewbox Stretch="Uniform">
+        <Grid>
+            <Image x:Name="videoImage"
+                   Width="640"
+                   Height="480"/>
+            <Canvas Background="Transparent">
+                <Ellipse Fill="Red"
+                         Height="20"
+                         Width="20"
+                         x:Name="ellipseLeftHand"
+                         Stroke="White" />
+                <Ellipse Fill="Red"
+                         Height="20"
+                         Width="20"
+                         x:Name="ellipseRightHand"
+                         Stroke="White" />
+                <Ellipse Fill="Red"
+                         Height="20"
+                         Width="20"
+                         x:Name="ellipseHead"
+                         Stroke="White" />
+                <Slider x:Name="slider" Height="45" Canvas.Left="10" Canvas.Top="425" Width="189" Minimum="-27" Maximum="27"/>
+                <Button x:Name="button" Content="set angle" Height="44" Canvas.Left="204" Canvas.Top="426" Width="97" Click="button_Click"/>
+            </Canvas>
+        </Grid>
+    </Viewbox>
+</Window>
